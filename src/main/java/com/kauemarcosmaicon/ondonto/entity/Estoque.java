@@ -13,7 +13,7 @@ public class Estoque {
     @Column(nullable = false, length = 50)
     private String nameProduct;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 400)
     private String descProduct;
 
     //@Column(nullable = false)
