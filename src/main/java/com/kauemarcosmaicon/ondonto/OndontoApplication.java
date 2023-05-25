@@ -6,14 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
-@RestController
 public class OndontoApplication {
-
-
-    @GetMapping("/")
-    public String hello()  {
-        return "Tetando a aplicaçao";
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(OndontoApplication.class, args);
