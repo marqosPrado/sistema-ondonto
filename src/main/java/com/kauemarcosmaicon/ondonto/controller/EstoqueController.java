@@ -71,8 +71,8 @@ public class EstoqueController {
         }
         var estoque = estoqueOptional.get();
         estoque.setNameProduct(estoqueDTO.getNameProduct());
-        estoque.setDescProduct(estoque.getDescProduct());
-        estoque.setQuantProduct(estoque.getQuantProduct());
+        estoque.setDescProduct(estoqueDTO.getDescProduct());
+        estoque.setQuantProduct(estoqueDTO.getQuantProduct());
 
         return ResponseEntity.status(HttpStatus.OK).body(estoqueService.save(estoque));
     }
