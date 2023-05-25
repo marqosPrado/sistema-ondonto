@@ -1,0 +1,52 @@
+.datepicker table {
+    font-size: 30px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  .datepicker th,
+  .datepicker td {
+    border: none;
+  }
+
+  .datepicker .active {
+    background-color: #70b0dd;
+    color: #fff;
+  }
+
+  .form-container {
+    position: absolute;
+    top: 120px;
+    right: -500px;
+    width: 400px;
+    height: 66%;
+    background-color: #70b0dd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    color: white;
+  }
+
+  .form-container.active {
+    right: 450px; 
+  }
+
+  .mostrar {
+    position: fixed;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+  }
+  
+  .mostrar input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .integracao {
+    position: fixed;
+    top: 20%;
+    right: 80px;
+    transform: translateY(-50%);
+  }

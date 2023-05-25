@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../img/icon.jpg">
+    <link rel="stylesheet" href="../css/controle_financeiro.css">
+    <script src="../js/controle_finaceiro.js"></script>
+	<title>Controle Financeiro - Clínica Odontológica</title>
+</head>
+<body>
+	<header>
+		<h1 class="logo">Takeshi Odonto Clinics</h1>
+		<nav>
+			<ul style="list-style: none;">
+                <li><a href="../Sistema-Odontologico/index.html">Início</a></li>
+				<li><a href="tml">Agendamento</a></li>
+				<li><a href="html">Estoque</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <div><h1>Controle Financeiro</h1></div>
+
+	<main>
+		<section class="container-receitas">
+			<h2>Receitas</h2>
+			<div class="header-receitas">
+				<div class="descriptons">
+					<div class="cell">Data</div>
+					<div class="cells">Valor</div>
+				</div>
+				<div class="row">
+					<div class="input"><input type="date" name="date"></div>
+					<div class="input"><input type="number" name="value" step="0.01" id="valor-receita"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container-receitas">
+			<h2 class="despesas">Despesas</h2>
+			<div class="header-despesas">
+				<div class="descriptons">
+					<div class="cell">Data</div>
+					<div class="cells">Valor</div>
+				</div>
+				<div class="row">
+					<div class="input"><input type="date" name="date"></div>
+					<div class="input"><input type="number" name="value" step="0.01" id="valor-despesa"></div>
+				</div>
+			</div>
+            <div class="container-receita-liquida">
+                <h2 class="titulo-receita-liquida">Receita Liquida</h2>
+                <div class="container-resultado">
+                    <p id="receita-liquida"></p>
+                </div>
+            </div>
+
+            <div>
+                <button id="button-calcular" onclick="calcular()">Calcular</button>
+            </div>
+		</section>
+	</main>
+
+	<footer>
+        <div class="container-links">
+          <div class="direitos">
+            <p>© 2023 - Todos os direitos reservados</p>
+          </div>
+    
+          <div class="links">
+            <ul style="list-style: none;">
+              <li>
+                <a href="#">Política de Privacidade</a>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#">Termos de Uso</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="../css/estoque.css">
+    <link rel="stylesheet" href="../css/agenda.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+</head>
+
+<header>
+  
+  <nav class="navbar">
+    <a class="logo" href="/index.html">Takeshi Odonto Clinics</a>
+    <ul class="nav-list" style="list-style: none;">
+      <li><a href="html">Estoque</a></li>
+
+      <li><a href="_financeiro.html">Controle Financeiro</a></li>
+
+    </ul>
+  </nav>
+  
+</header>
+
+<body>
+    <div class="integracao">
+      <div class="btn-group" role="group" aria-label="Calendar integration">
+        <a href="#" class="btn btn-primary" id="google-button">
+          <i class="fab fa-google"></i> Google Calendar
+        </a>
+        <a href="#" class="btn btn-primary" id="outlook-button">
+          <i class="fab fa-microsoft"></i> Outlook
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Agenda de eventos</h1>
+      <form>
+        <div class="form-group">
+          <label for="datepicker">Escolha uma data:</label>
+          <div id="datepicker"></div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="form-container">
+      
+      <div class="form-wrapper">
+        <h2>Formulário</h2>
+        <form id="event-form">
+          <div class="form-group">
+            <label for="nome-evento">Nome do Evento:</label>
+            <input type="text" class="form-control" id="nome-evento">
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <textarea class="form-control" id="descricao"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="start-time">Horário de início:</label>
+            <input type="time" class="form-control" id="start-time">
+          </div>
+          <div class="form-group">
+            <label for="end-time">Horário de término:</label>
+            <input type="time" class="form-control" id="end-time">
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mostrar">
+      <h4><p></p></h4>
+      <p>Nome do evento:</p>
+      <input type="text" id="resp1" value="">
+      <p>Descricao evento:</p>
+      <input type="text" id="resp2" value="">
+      <p>Início:</p>
+      <input type="text" id="resp3" value="">
+      <p>Fim:</p>
+      <input type="text" id="resp4" value="">
+    </div>
+
+    <script>
+      $(function() {
+        
+        // comandos pro calendario aparecer
+        $('#datepicker').datepicker({
+          format: 'dd/mm/yyyy',
+          autoclose: true,
+          todayHighlight: true
+        }).on('changeDate', function(e) {
+          $('.form-container').addClass('active');
+        }); 
+        $('form#event-form').submit(function(e) {
+          e.preventDefault();
+          
+          var nome = document.getElementById("nome-evento").value;
+          var desc = document.getElementById("descricao").value;
+          var ini = document.getElementById("start-time").value;
+          var fim = document.getElementById("end-time").value;
+
+          document.getElementById('resp1').value = nome;
+          document.getElementById('resp2').value = desc;
+          document.getElementById('resp3').value = ini;
+          document.getElementById('resp4').value = fim;
+        });
+            
+          // esconde o calendario
+          $('.form-container').removeClass('active');
+        });
+            
+    </script>
+
+</body>
+</html>

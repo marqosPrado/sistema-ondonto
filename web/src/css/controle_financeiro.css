@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background: #70b0dd;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui;
+    height: 10vh;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+ul {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: uppercase;
+    letter-spacing: 4px;
+}
+
+div h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    background: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 10px;
+    height: 110vh;
+    margin: 10px;
+}
+
+.container-receitas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header-receitas {
+    display: flex;
+    flex-direction: row;
+    background: #398839;
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header-despesas {
+    display: flex;
+    flex-direction: row;
+    background: #883e39;
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input {
+    margin-left: 30px;
+    height: 27px;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.cell {
+    font-size: 22px;
+    margin-bottom: 32px;
+}
+
+.cells {
+    font-size: 22px;
+}
+
+.despesas {
+    margin-top:30px;
+}
+
+.total {
+    background: #398839;
+    padding: 20px;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.total-despesas {
+    background: rgb(172, 68, 68);
+    padding: 20px;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.container-receita-liquida {
+    margin-top: 50px;
+}
+
+.container-resultado {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container-resultado p {
+    text-align: center;
+    font-size: 28px;
+}
+
+.titulo-receita-liquida {
+    font-size: 28px; 
+}
+
+#button-calcular {
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    background: #3d3dff;
+    border: 1px solid #3d3dff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.container-links {
+    background-color: #70b0dd;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 20px;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.links li {
+    margin-left: 10px;
+}
