@@ -12,7 +12,7 @@ public class OndontoApplication {
 
     @GetMapping("/")
     public String hello()  {
-        return "Tetando a aplicação";
+        return "Tetando a aplicaçao";
     }
 
     public static void main(String[] args) {
