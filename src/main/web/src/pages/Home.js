@@ -73,7 +73,7 @@ function Home() {
                 >
                     <a
                         href="/"
-                        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+                        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
                     >
                         <img className="bi me-2" width="40" src={logo} alt="Logo"/>
                         <span className="fs-4">Takeshi Odonto Clinics</span>
