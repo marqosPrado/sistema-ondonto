@@ -89,7 +89,7 @@
                 </executions>
                 <configuration>
                     <nodeVersion>20.2.0</nodeVersion>
-                    <workingDirectory>src/main/frontend</workingDirectory>
+                    <workingDirectory>src/main/web</workingDirectory>
                 </configuration>
             </plugin>
         </plugins>
