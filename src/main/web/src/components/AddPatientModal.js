@@ -19,7 +19,7 @@ const AddPatientModal = ({ showModal, closeModal, addPatient }) => {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://sistema-odonto.azurewebsites.net/cadastro-paciente', {
+      const response = await fetch('http://127.0.0.1:8080/cadastro-paciente', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ const ProductControl = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://sistema-odonto.azurewebsites.net/listar-estoque');
+      const response = await fetch('http://127.0.0.1:8080/listar-estoque');
       const data = await response.json();
       setProducts(data); // atualiza o estado com os produtos recebidos do servidor
     } catch (error) {

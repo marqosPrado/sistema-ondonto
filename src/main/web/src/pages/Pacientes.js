@@ -15,7 +15,7 @@ function Pacientes() {
 
   const fetchPatients = async () => {
     try {
-      const response = await fetch('https://sistema-odonto.azurewebsites.net/listar-paciente');
+      const response = await fetch('http://127.0.0.1:8080/listar-paciente');
       const data = await response.json();
       setPatients(data); // atualiza o estado com os produtos recebidos do servidor
     } catch (error) {
@@ -53,7 +53,7 @@ function Pacientes() {
   };
 
   const deletePatient = async (patient) => {try {
-    const response = await fetch(`https://sistema-odonto.azurewebsites.net/listar-paciente/deletar/${patient.id}`, {
+    const response = await fetch(`http://127.0.0.1:8080/listar-paciente/deletar/${patient.id}`, {
       method: 'DELETE',
     });
 

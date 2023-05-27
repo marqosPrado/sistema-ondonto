@@ -20,7 +20,7 @@ const EditPatientModal = ({ showModal, closeModal, patient, editPatient }) => {
     event.preventDefault();
 
     try {
-      const url = `https://sistema-odonto.azurewebsites.net/listar-paciente/editar/${patient.id}`;
+      const url = `http://127.0.0.1:8080/listar-paciente/editar/${patient.id}`;
 
       const data = { ...editedPatient };
 
