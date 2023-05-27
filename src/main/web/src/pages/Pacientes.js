@@ -52,11 +52,21 @@ function Pacientes() {
     setSelectedPatient(null);
   };
 
-  const deletePatient = (patient) => {
-    const updatedPatients = patients.filter((p) => p !== patient);
-    setPatients(updatedPatients);
-  };
+  const deletePatient = async (patient) => {try {
+    const response = await fetch(`https://sistema-odonto.azurewebsites.net/listar-paciente/deletar/${patient.id}`, {
+      method: 'DELETE',
+    });
 
+    if (response.ok) {
+      const updatedPatients = patients.filter((p) => p !== patient);
+      setPatients(updatedPatients);
+    } else {
+      console.error('Erro ao excluir paciente:', response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error('Erro ao excluir paciente:', error);
+  }
+  };
 
   return (
     <>

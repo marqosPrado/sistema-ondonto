@@ -4,8 +4,7 @@ const AddPatientModal = ({ showModal, closeModal, addPatient }) => {
   const [newPatient, setNewPatient] = useState({
     name: '',
     phone: '',
-    email: '',
-    prontuario: null
+    email: ''
   });
 
   const handleInputChange = (event) => {
@@ -17,7 +16,6 @@ const AddPatientModal = ({ showModal, closeModal, addPatient }) => {
   };
 
   const handleSubmit = async (event) => {
-    console.log("teste")
     event.preventDefault();
 
     try {
@@ -35,8 +33,7 @@ const AddPatientModal = ({ showModal, closeModal, addPatient }) => {
         setNewPatient({
           name: '',
           phone: '',
-          email: '',
-          prontuario: null
+          email: ''
         });
         closeModal();
       } else {
@@ -92,15 +89,6 @@ const AddPatientModal = ({ showModal, closeModal, addPatient }) => {
                   value={newPatient.email}
                   onChange={handleInputChange}
                   required
-                />
-              </div>
-              <div className="form-group">
-                <label>Prontuário (PDF):</label>
-                <input
-                  type="file"
-                  className="form-control-file"
-                  name="prontuario"
-                  onChange={handleFileChange}
                 />
               </div>
             </div>
