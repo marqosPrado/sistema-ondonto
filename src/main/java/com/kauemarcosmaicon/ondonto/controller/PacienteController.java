@@ -24,7 +24,7 @@ public class PacienteController {
 
     @PostMapping("/cadastro-paciente")
     public ResponseEntity<?> cadastrarPaciente(@RequestBody Paciente paciente) {
-        if(paciente.getNamePaciente().isEmpty() || paciente.getEmail().isEmpty() || paciente.getPhone().isEmpty()) {
+        if(paciente.getName().isEmpty() || paciente.getEmail().isEmpty() || paciente.getPhone().isEmpty()) {
             return ResponseEntity.badRequest().body("Campos obrigatórios estão faltando");
         }
         try {
@@ -55,7 +55,7 @@ public class PacienteController {
         }
 
         var pacienteGet = pacienteId.get();
-        pacienteGet.setNamePaciente(paciente.getNamePaciente());
+        pacienteGet.setName(paciente.getName());
         pacienteGet.setPhone(paciente.getPhone());
         pacienteGet.setEmail(paciente.getEmail());
 

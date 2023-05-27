@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import AddPatientModal from "../components/AddPatientModal";
 import EditPatientModal from "../components/EditPatientModal";
 
@@ -8,6 +8,20 @@ function Pacientes() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedPatient, setSelectedPatient] = useState(null);
+
+  useEffect(() => {
+    fetchPatients();
+  }, []); // o segundo parâmetro [] faz com que o useEffect seja executado apenas uma vez, após a montagem do componente
+
+  const fetchPatients = async () => {
+    try {
+      const response = await fetch('https://sistema-odonto.azurewebsites.net/listar-paciente');
+      const data = await response.json();
+      setPatients(data); // atualiza o estado com os produtos recebidos do servidor
+    } catch (error) {
+      console.error('Erro ao buscar os pacientes:', error);
+    }
+  };
 
   const openAddModal = () => {
     setShowAddModal(true);
@@ -67,7 +81,7 @@ function Pacientes() {
         <tbody>
         {patients.map((patient, index) => (
           <tr key={index}>
-            <td>{patient.name}</td>
+            <td>{patient.nome}</td>
             <td>{patient.phone}</td>
             <td>{patient.email}</td>
             <td>

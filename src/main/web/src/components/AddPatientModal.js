@@ -16,17 +16,38 @@ const AddPatientModal = ({ showModal, closeModal, addPatient }) => {
     setNewPatient({ ...newPatient, prontuario: event.target.files[0] });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
+    console.log("teste")
     event.preventDefault();
-    addPatient(newPatient);
-    setNewPatient({
-      name: '',
-      phone: '',
-      email: '',
-      prontuario: null
-    });
-    closeModal();
+
+    try {
+      const response = await fetch('https://sistema-odonto.azurewebsites.net/cadastro-paciente', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newPatient),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        addPatient(data); // Chame a função para adicionar o paciente na lista local de pacientes
+        setNewPatient({
+          name: '',
+          phone: '',
+          email: '',
+          prontuario: null
+        });
+        closeModal();
+      } else {
+        // Trate o caso em que a requisição não foi bem-sucedida
+        console.error('Erro ao adicionar paciente:', response.status, response.statusText);
+      }
+    } catch (error) {
+      console.error('Erro ao adicionar paciente:', error);
+    }
   };
+
 
   return (
     <div className={`modal ${showModal ? 'd-block' : 'd-none'}`}>

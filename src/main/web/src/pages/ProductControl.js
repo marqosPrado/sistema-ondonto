@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import ProductModal from "../components/ProductModal";
 import Header from "../components/Header";
 
@@ -6,6 +6,20 @@ const ProductControl = () => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []); // o segundo parâmetro [] faz com que o useEffect seja executado apenas uma vez, após a montagem do componente
+
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch('https://sistema-odonto.azurewebsites.net/listar-estoque');
+      const data = await response.json();
+      setProducts(data); // atualiza o estado com os produtos recebidos do servidor
+    } catch (error) {
+      console.error('Erro ao buscar os produtos:', error);
+    }
+  };
 
   const openModal = (product) => {
     setSelectedProduct(product);

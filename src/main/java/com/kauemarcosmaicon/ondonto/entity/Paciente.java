@@ -11,7 +11,7 @@ public class Paciente {
     private Long id;
 
     @Column(nullable = false, length = 50)
-    private String namePaciente;
+    private String name;
 
     @Column(nullable = false, length = 20)
     private String phone;
@@ -19,8 +19,8 @@ public class Paciente {
     @Column(nullable = false, length = 50)
     private String email;
 
-    public String getNamePaciente() {
-        return namePaciente;
+    public String getName() {
+        return name;
     }
 
     public Long getId() {
@@ -31,8 +31,8 @@ public class Paciente {
         this.id = id;
     }
 
-    public void setNamePaciente(String namePaciente) {
-        this.namePaciente = namePaciente;
+    public void setName(String namePaciente) {
+        this.name = namePaciente;
     }
 
     public String getPhone() {
