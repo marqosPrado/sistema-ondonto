@@ -31,8 +31,8 @@ public class Paciente {
         this.id = id;
     }
 
-    public void setName(String namePaciente) {
-        this.name = namePaciente;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPhone() {
