@@ -31,7 +31,7 @@ public class PacienteController {
             var response = pacienteService.save(paciente);
             return ResponseEntity.status(HttpStatus.OK).body(response);
         } catch (Exception Error) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocorreu um erro durante o cadastro do paciente");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Error);
         }
     }
 
