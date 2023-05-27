@@ -70,9 +70,11 @@ public class EstoqueController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Produto não encontrado");
         }
         var estoque = estoqueOptional.get();
-        estoque.setNameProduct(estoqueDTO.getNameProduct());
+        estoque.setCodProduct(estoqueDTO.getCodProduct());
         estoque.setDescProduct(estoqueDTO.getDescProduct());
         estoque.setQuantProduct(estoqueDTO.getQuantProduct());
+        estoque.setFornecedor(estoqueDTO.getFornecedor());
+        estoque.setTypeProduct(estoqueDTO.getTypeProduct());
 
         return ResponseEntity.status(HttpStatus.OK).body(estoqueService.save(estoque));
     }

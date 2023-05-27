@@ -11,13 +11,19 @@ public class Estoque {
     private Long id;
 
     @Column(nullable = false, length = 50)
-    private String nameProduct;
+    private String codProduct;
 
     @Column(nullable = false, length = 400)
     private String descProduct;
 
+    @Column(nullable = false, length = 50)
+    private String fornecedor;
+
     //@Column(nullable = false)
     private Integer quantProduct;
+
+    @Column(nullable = false, length = 100)
+    private String typeProduct;
 
 
     public Long getId() {
@@ -32,12 +38,28 @@ public class Estoque {
         this.quantProduct = quantProduct;
     }
 
-    public String getNameProduct() {
-        return nameProduct;
+    public String getCodProduct() {
+        return codProduct;
     }
 
-    public void setNameProduct(String nameProduct) {
-        this.nameProduct = nameProduct;
+    public void setCodProduct(String codProduct) {
+        this.codProduct = codProduct;
+    }
+
+    public String getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    public String getTypeProduct() {
+        return typeProduct;
+    }
+
+    public void setTypeProduct(String typeProduct) {
+        this.typeProduct = typeProduct;
     }
 
     public String getDescProduct() {

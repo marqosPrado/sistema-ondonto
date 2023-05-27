@@ -7,21 +7,43 @@ import jakarta.validation.constraints.Size;
 public class EstoqueDTO {
 
     @NotBlank
-    private String nameProduct;
+    private String codProduct;
 
     @NotBlank
     @Size(max = 20)
     private String descProduct;
 
     @NotBlank
+    private String fornecedor;
+
+    @NotBlank
     private Integer quantProduct;
 
-    public String getNameProduct() {
-        return nameProduct;
+    @NotBlank
+    private String typeProduct;
+
+    public String getCodProduct() {
+        return codProduct;
     }
 
-    public void setNameProduct(String nameProduct) {
-        this.nameProduct = nameProduct;
+    public void setCodProduct(String codProduct) {
+        this.codProduct = codProduct;
+    }
+
+    public String getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(String fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    public String getTypeProduct() {
+        return typeProduct;
+    }
+
+    public void setTypeProduct(String typeProduct) {
+        this.typeProduct = typeProduct;
     }
 
     public String getDescProduct() {
