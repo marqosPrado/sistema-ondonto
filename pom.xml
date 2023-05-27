@@ -94,7 +94,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <nodeVersion>20.2.0</nodeVersion>
+                    <nodeVersion>v20.2.0</nodeVersion>
                     <workingDirectory>src/main/web</workingDirectory>
                     <installDirectory>target</installDirectory>
                 </configuration>
