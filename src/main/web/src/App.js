@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import StockControl from "./pages/StockControl";
 import InventoryControl from "./pages/InventoryControl";
 import ProductControl from "./pages/ProductControl";
+import Estoque from "./pages/Estoque";
 
 function App() {
     return (
@@ -14,7 +15,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="pacientes" element={<Pacientes />} />
-              <Route path="estoque" element={<StockControl />} />
+              <Route path="estoque" element={<Estoque />} />
               <Route path="inventario" element={<InventoryControl />} />
               <Route path="produtos" element={<ProductControl />} />
 
