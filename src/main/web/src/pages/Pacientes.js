@@ -74,25 +74,15 @@ function Pacientes() {
           <th>Nome</th>
           <th>Telefone</th>
           <th>Email</th>
-          <th>Prontuário</th>
           <th>Ações</th>
         </tr>
         </thead>
         <tbody>
         {patients.map((patient, index) => (
           <tr key={index}>
-            <td>{patient.nome}</td>
+            <td>{patient.name}</td>
             <td>{patient.phone}</td>
             <td>{patient.email}</td>
-            <td>
-              {patient.prontuario ? (
-                <a href={patient.prontuario} target="_blank" rel="noopener noreferrer">
-                  Visualizar Prontuário
-                </a>
-              ) : (
-                'Nenhum prontuário anexado'
-              )}
-            </td>
             <td>
               <button className="btn btn-primary" onClick={() => openEditModal(patient)}>
                 Editar
