@@ -1,54 +1,70 @@
-Telas
+# Getting Started with Create React App
 
-- Início
-- Agenda
-- Controle Financeiro
-- Estoque
-- Pacientes
-- Sobre
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Tela Inicial
+## Available Scripts
 
-Documentação
+In the project directory, you can run:
 
+### `npm start`
 
-Página inicial:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-A página inicial é uma página web que apresenta informações sobre o sistema de gerenciamento para clínicas odontológicas, da clínica fictícia "Takeshi Odonto Clinics".
-A seção head contém informações importantes sobre a página, como o título, o ícone da página, o conjunto de caracteres e o CSS externo do Bootstrap.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-A página tem um modal de login que é exibido quando o botão "Entrar" é clicado. Este modal apresenta um formulário de login com campos para e-mail e senha e um botão de envio. Há também um link para redefinir a senha.
+### `npm test`
 
-O corpo da página contém um cabeçalho com um logotipo e um botão "Entrar". Abaixo do cabeçalho, há um banner com informações sobre o sistema de gerenciamento para clínicas odontológicas. 
-A página tem duas seções principais: Agenda e Estoque. A seção Agenda apresenta informações sobre a agenda da clínica, como agendamento de consultas e disponibilidade de horários. A seção Estoque apresenta informações sobre o controle de estoque da clínica.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Cada seção tem um título, uma descrição e uma imagem relacionada. Há um botão "Agende uma demonstração" em cada seção que leva para um formulário de contato (Não implementado até o momento).
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Agenda:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-A página inclui uma barra de navegação com links para outras páginas, um seletor de data com integração com o Google Calendar e o Outlook, um formulário para adicionar eventos à agenda e uma seção para exibir os eventos cadastrados (Não implementado até o momento).
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-O código inclui links para estilos Bootstrap e scripts jQuery e Bootstrap-datepicker. A seção do cabeçalho contém a marca e o menu de navegação. A seção principal inclui o seletor de data e o formulário para adicionar eventos. A seção de exibição de eventos permite visualizar os dados cadastrados no formulário.
+### `npm run eject`
 
-O código também contém um script jQuery que manipula o seletor de data e o formulário de eventos. Quando um evento é cadastrado, seus dados são exibidos na seção de exibição de eventos.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Controle Financeiro:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-A página contém uma estrutura de cabeçalho, corpo e rodapé, com uma seção principal que contém duas seções secundárias para gerenciamento de receitas e despesas.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-O cabeçalho inclui o nome e o logotipo da clínica odontológica, bem como um menu de navegação com links para a página inicial, agendamento e estoque.
+## Learn More
 
-O corpo da página contém duas seções, uma para entrada de receitas e outra para entrada de despesas. Ambas as seções têm uma tabela para entrada de dados com duas colunas: data e valor. As seções também incluem botões de calcular para calcular a receita líquida.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Pacientes:
+### Code Splitting
 
-Nessa página é possível o cadastro, edição e exclusão dos pacientes da clínica.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
-Sobre:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-A página contém um título, uma barra de navegação com links para outras páginas no site e um arquivo CSS que é usado para estilizar a página. O corpo da página contém várias seções, incluindo uma seção "Sobre Nós", que fornece informações sobre a clínica odontológica, uma seção "Serviços", que lista os serviços oferecidos, uma seção "Contato", que contém um formulário para contato e uma seção de imagem com botões de rolagem para visualização de imagens.
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
