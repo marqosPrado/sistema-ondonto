@@ -27,6 +27,11 @@ public class EstoqueController {
         return ResponseEntity.status(HttpStatus.OK).body(estoqueService.findAll());
     }
 
+    @GetMapping("/itens-baixo-estoque")
+    public ResponseEntity<List<Estoque>> baixoEstoque() {
+        return ResponseEntity.status(HttpStatus.OK).body(estoqueService.lowStock());
+    }
+
     @Transactional
     @PostMapping("/cadastrar-estoque")
     public ResponseEntity<Object> cadastrarEstoque(@RequestBody @Valid EstoqueDTO estoqueDTO) {

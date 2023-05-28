@@ -8,9 +8,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import React from "react";
-import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 function Home() {
+    let navigate = useNavigate()
+
+    function handleLogin() {
+        document.getElementById("modalLogin").classList.remove("show", "d-block");
+        document.querySelectorAll(".modal-backdrop")
+            .forEach(el => el.classList.remove("modal-backdrop"));
+
+        navigate('/dashboard')
+
+    }
 
     return (
         <>
@@ -55,9 +65,9 @@ function Home() {
                                         id="exampleInputPassword1"
                                     />
                                 </div>
-                                <Link to={"/dashboard"} className={"btn btn-primary"}>
+                                <a className={"btn btn-primary"} onClick={handleLogin}>
                                     Entrar
-                                </Link>
+                                </a>
                                 <p className="form-text mb-0">
                                     Esqueceu a senha? <a href="/#">Clique aqui</a>.
                                 </p>

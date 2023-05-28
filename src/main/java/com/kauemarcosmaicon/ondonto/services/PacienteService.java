@@ -22,8 +22,8 @@ public class PacienteService {
         return pacienteRepository.findAll();
     }
 
-    public Optional<Paciente> getById(Long id) {
-        return pacienteRepository.findById(id);
+    public long count() {
+        return pacienteRepository.count();
     }
 
     public Optional<Paciente> findById(Long id) {

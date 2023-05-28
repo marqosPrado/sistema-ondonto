@@ -78,7 +78,7 @@ function Pacientes() {
         Adicionar Paciente
       </button>
 
-      <table className="table mt-4">
+      <table className="table mt-4 table-striped table-bordered table-hover">
         <thead>
         <tr>
           <th>Nome</th>

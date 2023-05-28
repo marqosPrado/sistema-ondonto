@@ -71,7 +71,7 @@ function Estoque() {
             <div className="container">
                 <h1>Controle de Estoque</h1>
 
-                <button className="btn btn-primary" onClick={openAddModal}>
+                <button className="btn btn-primary mb-4" onClick={openAddModal}>
                     Adicionar Produto
                 </button>
 

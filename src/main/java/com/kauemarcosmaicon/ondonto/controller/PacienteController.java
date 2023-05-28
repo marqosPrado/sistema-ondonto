@@ -22,6 +22,11 @@ public class PacienteController {
         return ResponseEntity.status(HttpStatus.OK).body(pacienteService.listAll());
     }
 
+    @GetMapping("/contar-pacientes")
+    public ResponseEntity<Long> contarPacientes() {
+        return ResponseEntity.status(HttpStatus.OK).body(pacienteService.count());
+    }
+
     @PostMapping("/cadastro-paciente")
     public ResponseEntity<?> cadastrarPaciente(@RequestBody Paciente paciente) {
         if(paciente.getName().isEmpty() || paciente.getEmail().isEmpty() || paciente.getPhone().isEmpty()) {

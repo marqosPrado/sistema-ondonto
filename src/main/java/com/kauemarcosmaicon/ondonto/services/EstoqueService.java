@@ -4,6 +4,7 @@ import com.kauemarcosmaicon.ondonto.entity.Estoque;
 import com.kauemarcosmaicon.ondonto.repository.EstoqueRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,5 +32,9 @@ public class EstoqueService {
     @Transactional
     public void delete(Estoque estoque) {
         estoqueRepository.delete(estoque);
+    }
+
+    public List<Estoque> lowStock() {
+        return estoqueRepository.findAll(Sort.by(Sort.Direction.ASC, "quantProduct"));
     }
 }
